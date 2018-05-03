@@ -44,3 +44,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Mongoid
 gem 'mongoid', '~> 6.1.0'
+
+group :test do
+  gem 'database_cleaner'
+end

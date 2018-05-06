@@ -14,6 +14,11 @@ RSpec.describe RoomsController, type: :controller do
       post :create, :params => {:name => "Test room" } , :format => :json
       expect(response).to be_successful
     end
+
+    it "returns http 422" do
+      post :create, :params => {:name => "" } , :format => :json
+      expect(response).to be_unprocessable
+    end
   end
 
   describe "GET #last_messages" do

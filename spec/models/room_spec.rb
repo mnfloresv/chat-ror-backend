@@ -9,6 +9,16 @@ RSpec.describe Room, type: :model do
     expect(room1).to be_valid
   end
 
+  it "is not valid without a name" do
+    room = Room.new(name: nil)
+    expect(room).to_not be_valid
+  end
+
+  it "is not valid with empty name" do
+    room = Room.new(name: "")
+    expect(room).to_not be_valid
+  end
+
   it "has no messages when created" do
     expect(room1.messages).to be_empty
   end

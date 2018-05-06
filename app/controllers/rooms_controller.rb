@@ -1,6 +1,6 @@
 class RoomsController < ApplicationController
   def index
-    @rooms = Room.only(:id, :name)
+    @rooms = Room.order(name: :asc).only(:id, :name)
     render json: @rooms
   end
 

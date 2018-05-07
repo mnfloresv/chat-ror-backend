@@ -1,6 +1,6 @@
 # chat-ror-backend
 
-Backend of web chat application that allow users to join rooms and communicate in real time.
+Backend of web chat application that allows users to join rooms and communicate in real time.
 
 This project provides an API server and the websocket server, for the frontend part see: https://gitlab.com/manufloresv/chat-vue-frontend
 
@@ -47,7 +47,7 @@ Host: chat-ror-backend.herokuapp.com
 Create a new room:
 
 ``` http
-POST /rooms HTTP/1.1
+POST /api/rooms HTTP/1.1
 Host: chat-ror-backend.herokuapp.com
 Content-Type: application/json
 
